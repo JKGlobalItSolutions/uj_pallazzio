@@ -3,48 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UJ PALLAZZIO - Luxury Hotel</title>
+    <title>UJ PALLAZZIO - Amenities</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
+    <!-- Add Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
     <style>
-        .hero-section {
-            position: relative;
-            height: 80vh;
-            overflow: hidden;
-        }
-        .carousel, .carousel-inner, .carousel-item {
-            height: 100%;
-        }
-        .carousel-item img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
-        .carousel-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
-            color: white;
-        }
         .brand-color {
             color: #ff9800;
         }
         .brand-bg {
             background-color: #ff9800;
         }
-        .feature-icon {
-            font-size: 2rem;
-            color: #ff9800;
-        }
         .navbar-brand img {
             height: 50px;
         }
-        .btn-book-now:hover {
-            background-color: #e65100 !important;
-            border-color: #e65100 !important;
+        .amenity-icon {
+            font-size: 2rem;
+            color: #ff9800;
         }
     </style>
 </head>
@@ -52,7 +29,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="./images/logo/ujpalazzio.png" alt="UJ PALLAZZIO Logo" class="me-2">
                 UJ PALLAZZIO
             </a>
@@ -62,13 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="rooms.html">Rooms</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="amenities.html">Amenities</a>
+                        <a class="nav-link active" href="amenities.html">Amenities</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
@@ -78,116 +55,128 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Automatic Slider -->
-    <section class="hero-section" id="home">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./images/slider/slider1.jpg" class="d-block w-100" alt="UJ PALLAZZIO">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/slider/slider2.jpg" class="d-block w-100" alt="UJ PALLAZZIO">
-                </div>
-                <div class="carousel-item">
-                    <img src="./images/slider/slider3.jpg" class="d-block w-100" alt="UJ PALLAZZIO">
-                </div>
-            </div>
-        </div>
-        <div class="carousel-overlay d-flex align-items-center">
-            <div class="container text-center">
-                <h1 class="display-3 fw-bold mb-4">Welcome to UJ PALLAZZIO</h1>
-                <p class="lead mb-4">Experience comfort, convenience, and peaceful ambience</p>
-                <a href="contact.html" class="btn btn-lg brand-bg text-white btn-book-now">Book Now</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features -->
-    <section class="py-5" id="features">
+    <!-- Amenities Section -->
+    <section class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Our Features</h2>
-            <div class="row justify-content-center g-4 text-center">
-                <div class="col-md-4 col-lg-3">
-                    <div class="text-center">
-                        <i class="bi bi-shield-check feature-icon mb-3"></i>
-                        <h4>24/7 CCTV Security</h4>
-                        <p>For your peace of mind</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <div class="text-center">
-                        <i class="bi bi-wifi feature-icon mb-3"></i>
-                        <h4>Free Wi-Fi</h4>
-                        <p>Stay connected throughout</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <div class="text-center">
-                        <i class="bi bi-car-front feature-icon mb-3"></i>
-                        <h4>Free Parking</h4>
-                        <p>Convenient parking for guests</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-lg-3">
-                    <div class="text-center">
-                        <i class="bi bi-people feature-icon mb-3"></i>
-                        <h4>Friendly Staff</h4>
-                        <p>Always ready to assist you</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rooms Preview -->
-    <section class="bg-light py-5" id="rooms-preview">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Comfortable Rooms</h2>
+            <h1 class="text-center mb-5">Our Amenities</h1>
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4 col-lg-3">
                     <div class="card h-100">
-                        <img src="./images/rooms/room1.jpg" class="card-img-top" alt="Deluxe Room">
-                        <div class="card-body">
-                            <h5 class="card-title">Deluxe Room</h5>
-                            <p class="card-text">Spacious room with AC, flat-screen TV, and free WiFi.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="contact.html" class="btn brand-bg text-white w-100 btn-book-now">Book Now</a>
+                        <div class="card-body text-center">
+                            <i class="bi bi-shield-check amenity-icon mb-3"></i>
+                            <h5 class="card-title">24/7 CCTV Security</h5>
+                            <p class="card-text">Round-the-clock surveillance for your peace of mind.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-lg-3">
                     <div class="card h-100">
-                        <img src="./images/rooms/room2.jpg" class="card-img-top" alt="Executive Room">
-                        <div class="card-body">
-                            <h5 class="card-title">Executive Room</h5>
-                            <p class="card-text">Premium room with enhanced comfort and services.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="contact.html" class="btn brand-bg text-white w-100 btn-book-now">Book Now</a>
+                        <div class="card-body text-center">
+                            <i class="bi bi-wifi amenity-icon mb-3"></i>
+                            <h5 class="card-title">Free Wi-Fi</h5>
+                            <p class="card-text">High-speed internet access throughout the hotel.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 col-lg-3">
                     <div class="card h-100">
-                        <img src="./images/rooms/room3.jpg" class="card-img-top" alt="Suite Room">
-                        <div class="card-body">
-                            <h5 class="card-title">Suite</h5>
-                            <p class="card-text">Luxury suite with separate living area and premium amenities.</p>
+                        <div class="card-body text-center">
+                            <i class="bi bi-car-front amenity-icon mb-3"></i>
+                            <h5 class="card-title">Free Parking</h5>
+                            <p class="card-text">Complimentary parking for all our guests.</p>
                         </div>
-                        <div class="card-footer">
-                            <a href="contact.html" class="btn brand-bg text-white w-100 btn-book-now">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-person-badge amenity-icon mb-3"></i>
+                            <h5 class="card-title">24-Hour Front Desk</h5>
+                            <p class="card-text">Always available to assist you with any requests.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-box-seam amenity-icon mb-3"></i>
+                            <h5 class="card-title">Luggage Storage</h5>
+                            <p class="card-text">Secure storage for your belongings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-water amenity-icon mb-3"></i>
+                            <h5 class="card-title">Daily Housekeeping</h5>
+                            <p class="card-text">Keeping your room fresh and clean every day.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <!-- Alternate icon -->
+                            <i class="fas fa-arrow-alt-circle-up amenity-icon mb-3"></i>
+                            <h5 class="card-title">Elevator</h5>
+                            <p class="card-text">Easy access to all floors.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-droplet amenity-icon mb-3"></i>
+                            <h5 class="card-title">Dry Cleaning</h5>
+                            <p class="card-text">Professional dry cleaning service available.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-basket3 amenity-icon mb-3"></i>
+                            <h5 class="card-title">Laundry Service</h5>
+                            <p class="card-text">Convenient laundry service for your comfort.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-safe amenity-icon mb-3"></i>
+                            <h5 class="card-title">Safety Deposit Boxes</h5>
+                            <p class="card-text">Secure storage for your valuables.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-emoji-smile amenity-icon mb-3"></i>
+                            <h5 class="card-title">Friendly Staff</h5>
+                            <p class="card-text">Our staff is always ready to assist you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-3">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <i class="bi bi-wind amenity-icon mb-3"></i>
+                            <h5 class="card-title">Smoking Area</h5>
+                            <p class="card-text">Designated smoking area available.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     
 
-  
-
-<!-- Footer -->
+   <!-- Footer -->
 <footer class="bg-dark text-white py-5">
     <div class="container">
       <div class="row">
@@ -254,11 +243,6 @@
   <script>
     document.getElementById('year').innerText = new Date().getFullYear();
   </script>
-  
-  
-  
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
