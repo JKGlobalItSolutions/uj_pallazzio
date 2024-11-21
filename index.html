@@ -46,6 +46,22 @@
             background-color: #e65100 !important;
             border-color: #e65100 !important;
         }
+        .navbar-nav .nav-link {
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff9800 !important;
+            background-color: #f8f9fa;
+        }
+        .btn-contact {
+            background-color: #ff9800;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-contact:hover {
+            background-color: #e65100;
+        }
+        
     </style>
 </head>
 <body>
@@ -62,7 +78,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="rooms.html">Rooms</a>
@@ -74,6 +90,9 @@
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
+                <a href="tel:9361677996" class="btn btn-contact ms-lg-3">
+                    <i class="bi bi-telephone-fill me-2"></i>9361677996
+                </a>
             </div>
         </div>
     </nav>
@@ -96,7 +115,7 @@
         <div class="carousel-overlay d-flex align-items-center">
             <div class="container text-center">
                 <h1 class="display-3 fw-bold mb-4">Welcome to UJ PALLAZZIO</h1>
-                <p class="lead mb-4">Experience comfort, convenience, and peaceful ambience</p>
+                <p class="lead mb-4 display-6">A Business Class Luxury Hotel</p>
                 <a href="contact.html" class="btn btn-lg brand-bg text-white btn-book-now">Book Now</a>
             </div>
         </div>
@@ -183,83 +202,67 @@
             </div>
         </div>
     </section>
-    
 
-  
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-geo-alt-fill" style="font-size: 24px;"></i>
+                        <div>
+                            <h3 class="h5 font-weight-bold mb-2">UJ PALLAZZIO</h3>
+                            <p class="text-white">
+                                725/2, Vellore Road<br />
+                                Thiruvalluvar Nagar<br />
+                                Deepam Nagar West<br />
+                                Enam Kariyandal<br />
+                                Tiruvannamalai DT - 606 604
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-telephone-fill" style="font-size: 24px;"></i>
+                        <a href="tel:9443355779" class="text-white hover:text-primary text-decoration-none">9361677996</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-envelope-fill" style="font-size: 24px;"></i>
+                        <a href="mailto:ujpallazzio@gmail.com" class="text-white hover:text-primary text-decoration-none">ujpallazzio@gmail.com</a>
+                    </div>
+                </div>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row">
-        <!-- Contact Information -->
-        <div class="col-md-6 mb-4">
-          <div class="d-flex align-items-start gap-3">
-            <i class="bi bi-geo-alt-fill" style="font-size: 24px;"></i>
-            <div>
-              <h3 class="h5 font-weight-bold mb-2">UJ PALLAZZIO</h3>
-              <p class="text-white">
-                725/2, Vellore Road<br />
-                Thiruvalluvar Nagar<br />
-                Deepam Nagar West<br />
-                Enam Kariyandal<br />
-                Tiruvannamalai DT - 606 604
-              </p>
+                <!-- About Company -->
+                <div class="col-md-6">
+                    <h2 class="h5 font-weight-bold mb-4">About the company</h2>
+                    <p class="text-white mb-4 max-w-md">
+                        Experience luxury and comfort at UJ PALLAZZIO. We offer premium accommodations with modern amenities, 
+                        24/7 security, and exceptional service to make your stay memorable and peaceful.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Facebook">
+                            <i class="bi bi-facebook" style="font-size: 20px; color: white;"></i>
+                        </a>
+                        <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Twitter">
+                            <i class="bi bi-twitter" style="font-size: 20px; color: white;"></i>
+                        </a>
+                        <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" style="font-size: 20px; color: white;"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="d-flex align-items-center gap-3">
-            <i class="bi bi-telephone-fill" style="font-size: 24px;"></i>
-            <a href="tel:9443355779" class="text-white hover:text-primary text-decoration-none">9443355779</a>
-          </div>
-          <div class="d-flex align-items-center gap-3">
-            <i class="bi bi-envelope-fill" style="font-size: 24px;"></i>
-            <a href="mailto:ujpallazzio@gmail.com" class="text-white hover:text-primary text-decoration-none">ujpallazzio@gmail.com</a>
-          </div>
-        </div>
-  
-        <!-- About Company -->
-        <div class="col-md-6">
-          <h2 class="h5 font-weight-bold mb-4">About the company</h2>
-          <p class="text-white mb-4 max-w-md">
-            Experience luxury and comfort at UJ PALLAZZIO. We offer premium accommodations with modern amenities, 
-            24/7 security, and exceptional service to make your stay memorable and peaceful.
-          </p>
-          <div class="d-flex gap-3">
-            <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Facebook">
-              <i class="bi bi-facebook" style="font-size: 20px; color: white;"></i>
-            </a>
-            <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Twitter">
-              <i class="bi bi-twitter" style="font-size: 20px; color: white;"></i>
-            </a>
-            <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="LinkedIn">
-              <i class="bi bi-linkedin" style="font-size: 20px; color: white;"></i>
-            </a>
-            <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="GitHub">
-              <i class="bi bi-github" style="font-size: 20px; color: white;"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Footer Bottom -->
-      <div class="mt-4 pt-4 border-top border-white text-center">
-        <p>&copy; <span id="year"></span> UJ PALLAZZIO. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  
-  <!-- Bootstrap Icons CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  
-  <!-- Script to Set Current Year -->
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
-  </script>
-  
-  
-  
 
-
+            <!-- Footer Bottom -->
+            <div class="mt-4 pt-4 border-top border-white text-center">
+                <p>&copy; <span id="year"></span> UJ PALLAZZIO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
 </body>
 </html>
