@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo/ujpalazzio.png" type="image/x-icon">
+    <title>UJ PALLAZZIO - Deluxe Room Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .brand-color { color: #ff9800; }
+        .brand-bg { background-color: #ff9800; }
+        .navbar-brand img { height: 50px; }
+        .btn-book-now:hover {
+            background-color: #e65100 !important;
+            border-color: #e65100 !important;
+        }
+        .navbar-nav .nav-link {
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff9800 !important;
+            background-color: #f8f9fa;
+        }
+        .btn-contact {
+            background-color: #ff9800;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-contact:hover {
+            background-color: #e65100;
+            color: white;
+        }
+        .room-image {
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .thumbnail {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        .thumbnail:hover {
+            opacity: 0.7;
+        }
+        #imageModal .modal-content {
+            background-color: transparent;
+            border: none;
+        }
+        #imageModal .modal-body {
+            padding: 0;
+        }
+        #modalImage {
+            max-height: 80vh;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .modal-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            font-size: 24px;
+        }
+        #prevBtn { left: 10px; }
+        #nextBtn { right: 10px; }
+        #scannerModal .modal-body {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #scanner {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo/ujpalazzio.png" alt="UJ PALLAZZIO Logo" class="me-2">
+                UJ PALLAZZIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenities.html">Amenities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="tel:9361677996" class="btn btn-contact ms-lg-3 mt-2 mt-lg-0">
+                    <i class="bi bi-telephone-fill me-2"></i>9361677996
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Room Details Section -->
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-5" data-aos="fade-up">Deluxe Room</h1>
+            <div class="row">
+                <div class="col-md-8 mb-4" data-aos="fade-right">
+                    <img src="./images/rooms/room1/one.jpg" class="img-fluid rounded room-image" id="mainImage" alt="Deluxe Room">
+                    <div class="row mt-3">
+                        <div class="col-3 mb-3" data-aos="fade-up" data-aos-delay="100">
+                            <img src="./images/rooms/room1/two.jpg" class="img-fluid rounded thumbnail" onclick="openModal(this.src)" alt="Deluxe Room">
+                        </div>
+                        <div class="col-3 mb-3" data-aos="fade-up" data-aos-delay="200">
+                            <img src="./images/rooms/room1/three.jpg" class="img-fluid rounded thumbnail" onclick="openModal(this.src)" alt="Deluxe Room Bathroom">
+                        </div>
+                        <div class="col-3 mb-3" data-aos="fade-up" data-aos-delay="300">
+                            <img src="./images/rooms/room1/four.jpg" class="img-fluid rounded thumbnail" onclick="openModal(this.src)" alt="Deluxe Room View">
+                        </div>
+                        <div class="col-3 mb-3" data-aos="fade-up" data-aos-delay="400">
+                            <img src="./images/rooms/room1/five.jpg" class="img-fluid rounded thumbnail" onclick="openModal(this.src)" alt="Deluxe Room Amenities">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-left">
+                    <h2 class="h4 mb-4">Room Details</h2>
+                    <p>Experience comfort and style in our spacious Deluxe Room, featuring modern amenities and a stunning city view.</p>
+                    <h3 class="h5 mt-4 mb-3">Amenities</h3>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Air Conditioning</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Flat-screen TV</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free Wi-Fi</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>En-suite bathroom</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Daily housekeeping</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Mini-fridge</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>Coffee maker</li>
+                        <li><i class="bi bi-check-circle-fill text-success me-2"></i>In-room safe</li>
+                    </ul>
+                    
+                    <a href="contact.html">
+                        <button class="btn brand-bg text-white w-100 btn-book-now mt-4">Book Now</button>
+                    </a>
+                                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-6 mb-4">
+                    <div class="d-flex align-items-start gap-3">
+                        <i class="bi bi-geo-alt-fill" style="font-size: 24px;"></i>
+                        <div>
+                            <h3 class="h5 font-weight-bold mb-2">UJ PALLAZZIO</h3>
+                            <p class="text-white">
+                                725/2, Vellore Road<br />
+                                Thiruvalluvar Nagar<br />
+                                Deepam Nagar West<br />
+                                Enam Kariyandal<br />
+                                Tiruvannamalai DT - 606 604
+                            </p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-telephone-fill" style="font-size: 24px;"></i>
+                        <a href="tel:9361677996" class="text-white hover:text-primary text-decoration-none">9361677996</a>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <i class="bi bi-envelope-fill" style="font-size: 24px;"></i>
+                        <a href="/cdn-cgi/l/email-protection#ec99869c8d80808d96968583ac8b818d8580c28f8381" class="text-white hover:text-primary text-decoration-none"><span class="__cf_email__" data-cfemail="e6938c96878a8a879c9c8f89a6818b878f8ac885898b">[email&#160;protected]</span></a>
+                    </div>
+                </div>
+
+                <!-- About Company -->
+                <div class="col-md-6">
+                    <h2 class="h5 font-weight-bold mb-4">About the company</h2>
+                    <p class="text-white mb-4 max-w-md">
+                        Experience luxury and comfort at UJ PALLAZZIO. We offer premium accommodations with modern amenities, 
+                        24/7 security, and exceptional service to make your stay memorable and peaceful.
+                    </p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Facebook">
+                            <i class="bi bi-facebook" style="font-size: 20px; color: white;"></i>
+                        </a>
+                        <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Twitter">
+                            <i class="bi bi-twitter" style="font-size: 20px; color: white;"></i>
+                        </a>
+                        <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" style="font-size: 20px; color: white;"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="mt-4 pt-4 border-top border-white text-center">
+                <p>&copy; <span id="year"></span> UJ PALLAZZIO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Room Image">
+                    <button id="prevBtn" class="modal-nav-btn">&lt;</button>
+                    <button id="nextBtn" class="modal-nav-btn">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+
+            const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            const modalImage = document.getElementById('modalImage');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            let currentIndex = 0;
+
+            function openModal(src) {
+                modalImage.src = src;
+                currentIndex = Array.from(thumbnails).findIndex(img => img.src === src);
+                imageModal.show();
+            }
+
+            function showImage(index) {
+                if (index >= 0 && index < thumbnails.length) {
+                    currentIndex = index;
+                    modalImage.src = thumbnails[currentIndex].src;
+                }
+            }
+
+            prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
+            nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
+
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => openModal(thumbnail.src));
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (imageModal._isShown) {
+                    if (e.key === 'ArrowLeft') {
+                        showImage(currentIndex - 1);
+                    } else if (e.key === 'ArrowRight') {
+                        showImage(currentIndex + 1);
+                    }
+                }
+            });
+        });
+
+        // Set current year
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>

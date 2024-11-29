@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/logo/ujpalazzio.png" type="image/x-icon">
-
     <title>UJ PALLAZZIO - Rooms</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         .brand-color {
             color: #ff9800;
@@ -22,7 +23,7 @@
             font-size: 1.2rem;
             margin-right: 10px;
         }
-        .btn-book-now:hover {
+        .btn-room-details:hover {
             background-color: #e65100 !important;
             border-color: #e65100 !important;
         }
@@ -67,6 +68,9 @@
                         <a class="nav-link" href="amenities.html">Amenities</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
@@ -80,62 +84,41 @@
     <!-- Rooms Section -->
     <section class="py-5">
         <div class="container">
-            <h1 class="text-center mb-5">Our Comfortable Rooms</h1>
+            <h1 class="text-center mb-5" data-aos="fade-up">Our Comfortable Rooms</h1>
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100">
-                        <img src="./images/rooms/room1.jpg" class="card-img-top" alt="Deluxe Room">
+                        <img src="./images/rooms/room1/one.jpg" class="card-img-top" alt="Deluxe Room">
                         <div class="card-body">
                             <h5 class="card-title">Deluxe Room</h5>
                             <p class="card-text">Spacious room with modern amenities and city view.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Air Conditioning</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Flat-screen TV</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Free Wi-Fi</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>En-suite bathroom</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Daily housekeeping</li>
-                            </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="contact.html" class="btn brand-bg text-white w-100 btn-book-now">Book Now</a>
+                            <a href="deluxe-room.html" class="btn brand-bg text-white w-100 btn-room-details">Room Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100">
-                        <img src="./images/rooms/room2.jpg" class="card-img-top" alt="Executive Room">
+                        <img src="./images/rooms/room2/one.jpg" class="card-img-top" alt="Executive Room">
                         <div class="card-body">
                             <h5 class="card-title">Executive Room</h5>
                             <p class="card-text">Premium room with enhanced comfort and services.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>All Deluxe Room amenities</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Larger space</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Work desk</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Complimentary minibar</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Bathrobe and slippers</li>
-                            </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="contact.html" class="btn brand-bg text-white w-100 btn-book-now">Book Now</a>
+                            <a href="index.html" class="btn brand-bg text-white w-100 btn-room-details">Room Details</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card h-100">
-                        <img src="./images/rooms/room3.jpg" class="card-img-top" alt="Suite Room">
+                        <img src="./images/rooms/room3/one.JPG" class="card-img-top" alt="Suite Room">
                         <div class="card-body">
                             <h5 class="card-title">Suite</h5>
                             <p class="card-text">Luxury suite with separate living area and premium amenities.</p>
-                            <ul class="list-unstyled">
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>All Executive Room amenities</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Separate living area</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Jacuzzi tub</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kitchenette</li>
-                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Priority housekeeping</li>
-                            </ul>
                         </div>
                         <div class="card-footer">
-                            <a href="contact.html" class="btn brand-bg text-white w-100 btn-book-now">Book Now</a>
+                            <a href="index.html" class="btn brand-bg text-white w-100 btn-room-details">Room Details</a>
                         </div>
                     </div>
                 </div>
@@ -143,8 +126,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
+   <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-3">
         <div class="container">
             <div class="row">
                 <!-- Contact Information -->
@@ -204,10 +187,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!-- Script to Set Current Year -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         document.getElementById('year').innerText = new Date().getFullYear();
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
     </script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

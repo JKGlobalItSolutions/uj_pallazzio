@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo/ujpalazzio.png" type="image/x-icon">
+    <title>UJ PALLAZZIO - Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@latest/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .brand-color { color: #ff9800; }
+        .brand-bg { background-color: #ff9800; }
+        .navbar-brand img { height: 50px; }
+        .navbar-nav .nav-link {
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff9800 !important;
+            background-color: #f8f9fa;
+        }
+        .btn-contact {
+            background-color: #ff9800;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn-contact:hover {
+            background-color: #e65100;
+            color: white;
+        }
+        .gallery-filter { margin-bottom: 20px; }
+        .filter-button {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .gallery-item {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+        #imageModal .modal-content {
+            background-color: transparent;
+            border: none;
+        }
+        #imageModal .modal-body {
+            padding: 0;
+        }
+        #modalImage {
+            max-height: 80vh;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .modal-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            padding: 10px;
+            font-size: 24px;
+        }
+        #prevBtn { left: 10px; }
+        #nextBtn { right: 10px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/logo/ujpalazzio.png" alt="UJ PALLAZZIO Logo" class="me-2">
+                UJ PALLAZZIO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rooms.html">Rooms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="amenities.html">Amenities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <a href="tel:9361677996" class="btn btn-contact ms-lg-3 mt-2 mt-lg-0">
+                    <i class="bi bi-telephone-fill me-2"></i>9361677996
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-5" data-aos="fade-up">Our Gallery</h1>
+            
+            <div class="gallery-filter text-center" data-aos="fade-up">
+                <button class="btn btn-outline-primary filter-button active" data-filter="all">All</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="rooms">Rooms</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="amenities">Amenities</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="reception">Reception</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="mountain">Mountain View</button>
+                <button class="btn btn-outline-primary filter-button" data-filter="exterior">Exterior</button>
+            </div>
+
+            <div class="row gallery-container">
+                <!-- Rooms -->
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="rooms" data-aos="fade-up">
+                    <img src="./images/rooms/room1/one.jpg" class="img-fluid" alt="Deluxe Room">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./images/rooms/room2/one.jpg" class="img-fluid" alt="Executive Room">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./images/rooms/room3/one.JPG" class="img-fluid" alt="Suite Room">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="rooms" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./images/rooms/room1/two.jpg" class="img-fluid" alt="Deluxe Room Bathroom">
+                </div>
+
+                <!-- Amenities -->
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="amenities" data-aos="fade-up">
+                    <img src="./images/cctv/one.JPG" class="img-fluid" alt="Free Wi-Fi">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="amenities" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./images/lifts/one.jpg" class="img-fluid" alt="Free Parking">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="amenities" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./images/parking/three.JPG" class="img-fluid" alt="Elevator">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="amenities" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./images/parking/four.jpg" class="img-fluid" alt="24/7 Security">
+                </div>
+
+                <!-- reception -->
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="reception" data-aos="fade-up">
+                    <img src="./images/reception/one.jpg" class="img-fluid" alt="reception">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="reception" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./images/reception/two.jpg" class="img-fluid" alt="reception god">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="reception" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./images/reception/three.JPG" class="img-fluid" alt="reception 2">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="reception" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./images/reception/five.JPG" class="img-fluid" alt="reception 3">
+                </div>
+                <!-- mountain -->
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="mountain" data-aos="fade-up">
+                    <img src="./images/mountain view and persona area/one.jpg" class="img-fluid" alt="reception">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="mountain" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./images/mountain view and persona area/eight.JPG" class="img-fluid" alt="reception god">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="mountain" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./images/mountain view and persona area/six.JPG" class="img-fluid" alt="reception 2">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="mountain" data-aos="fade-up" data-aos-delay="300">
+                    <img src="./images/mountain view and persona area/three.JPG" class="img-fluid" alt="reception 3">
+                </div>
+
+                <!-- Exterior -->
+               
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="exterior" data-aos="fade-up" data-aos-delay="200">
+                    <img src="./images/building/night view/one.jpg" class="img-fluid" alt="Hotel at Night">
+                </div>
+                <div class="col-md-3 col-sm-6 gallery-item" data-category="exterior" data-aos="fade-up" data-aos-delay="100">
+                    <img src="./images/building/day view/two.jpg" class="img-fluid" alt="Hotel Entrance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Gallery Image">
+                    <button id="prevBtn" class="modal-nav-btn">&lt;</button>
+                    <button id="nextBtn" class="modal-nav-btn">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <!-- Footer -->
+ <footer class="bg-dark text-white py-5 mt-3">
+    <div class="container">
+        <div class="row">
+            <!-- Contact Information -->
+            <div class="col-md-6 mb-4">
+                <div class="d-flex align-items-start gap-3">
+                    <i class="bi bi-geo-alt-fill" style="font-size: 24px;"></i>
+                    <div>
+                        <h3 class="h5 font-weight-bold mb-2">UJ PALLAZZIO</h3>
+                        <p class="text-white">
+                            725/2, Vellore Road<br />
+                            Thiruvalluvar Nagar<br />
+                            Deepam Nagar West<br />
+                            Enam Kariyandal<br />
+                            Tiruvannamalai DT - 606 604
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-telephone-fill" style="font-size: 24px;"></i>
+                    <a href="tel:9361677996" class="text-white hover:text-primary text-decoration-none">9361677996</a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-envelope-fill" style="font-size: 24px;"></i>
+                    <a href="mailto:ujpallazzio@gmail.com" class="text-white hover:text-primary text-decoration-none">ujpallazzio@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- About Company -->
+            <div class="col-md-6">
+                <h2 class="h5 font-weight-bold mb-4">About the company</h2>
+                <p class="text-white mb-4 max-w-md">
+                    Experience luxury and comfort at UJ PALLAZZIO. We offer premium accommodations with modern amenities, 
+                    24/7 security, and exceptional service to make your stay memorable and peaceful.
+                </p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Facebook">
+                        <i class="bi bi-facebook" style="font-size: 20px; color: white;"></i>
+                    </a>
+                    <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="Twitter">
+                        <i class="bi bi-twitter" style="font-size: 20px; color: white;"></i>
+                    </a>
+                    <a href="#" class="bg-dark p-2 rounded-circle hover:bg-secondary transition-colors" aria-label="LinkedIn">
+                        <i class="bi bi-linkedin" style="font-size: 20px; color: white;"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="mt-4 pt-4 border-top border-white text-center">
+            <p>&copy; <span id="year"></span> UJ PALLAZZIO. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-button');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            const modalImage = document.getElementById('modalImage');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+            let filteredItems = [];
+
+            // Filter functionality
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    updateFilteredItems();
+                });
+            });
+
+            // Update filtered items
+            function updateFilteredItems() {
+                filteredItems = Array.from(galleryItems).filter(item => item.style.display !== 'none');
+            }
+
+            // Open modal with clicked image
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const imgSrc = this.querySelector('img').src;
+                    modalImage.src = imgSrc;
+                    currentIndex = filteredItems.indexOf(this);
+                    modal.show();
+                });
+            });
+
+            // Navigation functionality
+            function showImage(index) {
+                if (index >= 0 && index < filteredItems.length) {
+                    currentIndex = index;
+                    modalImage.src = filteredItems[currentIndex].querySelector('img').src;
+                }
+            }
+
+            prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
+            nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
+
+            // Initialize
+            updateFilteredItems();
+
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true,
+                offset: 100
+            });
+        });
+
+        // Set current year
+        document.getElementById('year').innerText = new Date().getFullYear();
+    </script>
+</body>
+</html>
