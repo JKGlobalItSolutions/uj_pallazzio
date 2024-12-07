@@ -51,8 +51,8 @@ body {
 #carouselId .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,12 +85,7 @@ body {
     border-color: #e65100 !important;
 }
 
-/* Experience Luxury Section */
-.experience-luxury {
-    position: relative;
-    overflow: hidden;
-}
-
+/* Add these styles to your existing CSS */
 .luxury-image {
     cursor: pointer;
     transition: opacity 0.3s ease;
@@ -101,6 +96,42 @@ body {
 .luxury-image:hover {
     opacity: 0.8;
 }
+
+#imageModal .modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#imageModal .btn-close {
+    z-index: 1;
+}
+
+#imageModal #modalImage {
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#prevImage, #nextImage {
+    z-index: 1;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+#prevImage:hover, #nextImage:hover {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .luxury-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .luxury-image {
+        height: 150px;
+    }
+}
+
 
 /* Image Modal */
 #imageModal .modal-content {
@@ -193,28 +224,7 @@ body {
     transform: rotate(135deg);
 }
 
-/* Ripple Animation */
-@-webkit-keyframes cc-calto-action-ripple {
-    0% {
-        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
-        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
-    }
-    100% {
-        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
-        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
-    }
-}
 
-@keyframes cc-calto-action-ripple {
-    0% {
-        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
-        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
-    }
-    100% {
-        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
-        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
-    }
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {

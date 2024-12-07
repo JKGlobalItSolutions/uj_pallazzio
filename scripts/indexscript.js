@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
         './images/mountain view and persona area/one.jpg',
-        './images/mountain view and persona area/twojpg',
+        './images/mountain view and persona area/two.JPG',
         './images/mountain view and persona area/three.JPG',
         './images/mountain view and persona area/four.JPG',
         './images/mountain view and persona area/five.JPG',
@@ -54,4 +54,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set current year
     document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Carousel autoplay
+    const carousel = document.querySelector('#carouselId');
+    if (carousel) {
+        const carouselInstance = new bootstrap.Carousel(carousel, {
+            interval: 5000,
+            wrap: true
+        });
+    }
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Form validation
+    const forms = document.querySelectorAll('.needs-validation');
+    Array.from(forms).forEach(form => {
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        }, false);
+    });
+
+    // Lazy loading images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    const lazyLoadObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                lazyLoadObserver.unobserve(img);
+            }
+        });
+    });
+
+    lazyImages.forEach(img => lazyLoadObserver.observe(img));
+
+    // Toggle mobile menu
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', () => {
+            navbarCollapse.classList.toggle('show');
+        });
+    }
 });
+
