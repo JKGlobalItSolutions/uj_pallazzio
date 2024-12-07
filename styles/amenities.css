@@ -1,0 +1,64 @@
+.brand-color {
+    color: #ff9800;
+}
+
+.brand-bg {
+    background-color: #ff9800;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.amenity-icon {
+    font-size: 2rem;
+    color: #ff9800;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff9800 !important;
+    background-color: #f8f9fa;
+}
+
+.btn-contact {
+    background-color: #ff9800;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #e65100;
+    color: white;
+}
+
+.amenity-section {
+    padding: 10px 0;
+}
+
+.amenity-section h3 {
+    color: #ff9800;
+}
+
+.amenity-image {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .amenity-image {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .amenity-image {
+        max-height: 150px;
+    }
+}

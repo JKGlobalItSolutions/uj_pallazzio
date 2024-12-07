@@ -1,0 +1,239 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar-brand img {
+    height: 50px;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff9800 !important;
+    background-color: #f8f9fa;
+}
+
+.btn-contact {
+    background-color: #ff9800;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.btn-contact:hover {
+    background-color: #e65100;
+}
+
+/* Carousel Styles */
+#carouselId {
+    position: relative;
+}
+
+#carouselId .carousel-item {
+    height: 100vh;
+}
+
+#carouselId .carousel-item img {
+    /* object-fit: cover; */
+    height: 100%;
+    width: 100%;
+}
+
+#carouselId .carousel-control-prev,
+#carouselId .carousel-control-next {
+    width: 10%;
+}
+
+#carouselId .carousel-control-prev-icon,
+#carouselId .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carouselId .carousel-control-prev-icon i,
+#carouselId .carousel-control-next-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+/* Brand Colors */
+.brand-color {
+    color: #ff9800;
+}
+
+.brand-bg {
+    background-color: #ff9800;
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 2rem;
+    color: #ff9800;
+}
+
+/* Buttons */
+.btn-book-now:hover {
+    background-color: #e65100 !important;
+    border-color: #e65100 !important;
+}
+
+/* Experience Luxury Section */
+.experience-luxury {
+    position: relative;
+    overflow: hidden;
+}
+
+.luxury-image {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    height: 300px;
+    object-fit: cover;
+}
+
+.luxury-image:hover {
+    opacity: 0.8;
+}
+
+/* Image Modal */
+#imageModal .modal-content {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#imageModal .btn-close {
+    z-index: 1;
+}
+
+#prevImage, #nextImage {
+    z-index: 1;
+}
+
+/* Call Button */
+.call-buton .cc-calto-action-ripple {
+    z-index: 99999;
+    position: fixed;
+    right: 15px;
+    bottom: 8rem;
+    background: #03bb50;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+    animation: cc-calto-action-ripple 0.6s linear infinite;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.call-buton .cc-calto-action-ripple i {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-size: 2.2rem;
+}
+
+.call-buton .cc-calto-action-ripple:hover i {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+/* WhatsApp Button */
+.whatsapp-button .cc-calto-action-ripple {
+    z-index: 99999;
+    position: fixed;
+    left: 15px;
+    bottom: 8rem;
+    background: #03bb50;
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #ffffff;
+    -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+    animation: cc-calto-action-ripple 0.6s linear infinite;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.whatsapp-button .cc-calto-action-ripple i {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    font-size: 2.2rem;
+}
+
+.whatsapp-button .cc-calto-action-ripple:hover i {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+/* Ripple Animation */
+@-webkit-keyframes cc-calto-action-ripple {
+    0% {
+        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
+        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
+    }
+    100% {
+        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
+        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
+    }
+}
+
+@keyframes cc-calto-action-ripple {
+    0% {
+        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
+        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 0 rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2);
+    }
+    100% {
+        -webkit-box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
+        box-shadow: 0 4px 10px rgba(236, 139, 0, 0.2), 0 0 0 5px rgba(236, 139, 0, 0.2), 0 0 0 10px rgba(236, 139, 0, 0.2), 0 0 0 20px rgba(236, 139, 0, 0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #carouselId .carousel-item {
+        height: 50vh;
+    }
+
+    .luxury-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    #carouselId .carousel-item {
+        height: 30vh;
+    }
+
+    .luxury-image {
+        height: 150px;
+    }
+}
+
