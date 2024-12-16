@@ -251,12 +251,6 @@
         function sendDetailsToWhatsAppAndEmail() {
             sendToWhatsApp();
             sendEmail();
-            const modal = bootstrap.Modal.getInstance(document.getElementById('thankYouModal'));
-            modal.hide();
-            // Set a flag in localStorage to indicate that the form was submitted
-            localStorage.setItem('formSubmitted', 'true');
-            // Refresh the page
-            window.location.reload();
         }
 
         function sendToWhatsApp() {
@@ -289,7 +283,14 @@
             emailjs.send("service_nppcx5w", "template_krgqr5r", templateParams, "LrtzARRpJ95xzVV9A")
                 .then(function(response) {
                     console.log("Email sent successfully!", response.status, response.text);
+                    alert("Email sent successfully!");
                     document.getElementById("contactForm").reset();
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('thankYouModal'));
+                    modal.hide();
+                    // Set a flag in localStorage to indicate that the form was submitted
+                    localStorage.setItem('formSubmitted', 'true');
+                    // Refresh the page
+                    window.location.reload();
                 }, function(error) {
                     console.log("Failed to send email.", error);
                     alert("Failed to send email. Please try again or contact us directly.");
